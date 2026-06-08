@@ -2,11 +2,11 @@ cask "metahub-app" do
   version "0.1.1"
 
   on_arm do
-    sha256 "b71cf344b67c54d7a049b8ceee9dc7126cd92c1340a30d8451d6e4ec7aa1b2dc"
+    sha256 "bbf20975535a4a9ee403cd2ae50186108812c3c55b64575ff43531aa8ab09de0"
     url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.1.1/Metahub-0.1.0-arm64.dmg"
   end
   on_intel do
-    sha256 "811dd6429c6019f5d4de501680bcff33390708f7af3cf1e9d1fc02b62e5d7618"
+    sha256 "0c440024f91f2c7f835831fc7892e9c1c670054e2e0027277ff9069f04ae0f22"
     url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.1.1/Metahub-0.1.0-x64.dmg"
   end
 
@@ -16,10 +16,14 @@ cask "metahub-app" do
 
   app "Metahub.app"
 
-  # Unsigned, by design (open-source — no Apple Developer signing). Installed via
-  # Homebrew the binary is not quarantined the way a browser download is; if you
-  # still hit Gatekeeper, install with `--no-quarantine` or allow it once in
-  # System Settings → Privacy & Security.
+  # Unsigned, by design (open-source — no Apple Developer signing). macOS would
+  # otherwise flag the freshly installed .app as "damaged" (the quarantine
+  # attribute on an unsigned, un-notarized bundle). Strip it on install so the
+  # app opens on first launch without a Gatekeeper detour.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Metahub.app"]
+  end
 
   zap trash: [
     "~/Library/Application Support/Metahub",
