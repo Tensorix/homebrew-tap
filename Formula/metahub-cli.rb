@@ -6,22 +6,22 @@ class MetahubCli < Formula
   on_macos do
     on_arm do
       url "https://github.com/Tensorix/metahub-core/releases/download/v0.1.5/metahub-darwin-arm64"
-      sha256 "b2f241cde2ea6b99d13ed7871cb7748722a7f2f87889fb27c2833ffe1b48607a"
+      sha256 "0e5d62b9f7f1c97bed924c0b8cfc37e9c1984b604e2aea0c31b3657ee7fd4b08"
     end
     on_intel do
       url "https://github.com/Tensorix/metahub-core/releases/download/v0.1.5/metahub-darwin-x64"
-      sha256 "887a9a7da2798e644dc2d5a276bc1897c737af01cce4663a7e071eeaf52765a9"
+      sha256 "568960e7d27d5fce8ea22daf538f611009e27eec2f5624798f9f9838a38c27c9"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/Tensorix/metahub-core/releases/download/v0.1.5/metahub-linux-arm64"
-      sha256 "5472da4b67959eb2edf6b69394d9d901ef9518918a3bd74c1ffe0a864af779d8"
+      sha256 "f322a5f42c761a3c857378736ff0935127747b6138970b7345ce4807338b4a55"
     end
     on_intel do
       url "https://github.com/Tensorix/metahub-core/releases/download/v0.1.5/metahub-linux-x64"
-      sha256 "0541cdc6d61e57a434e9b0f4fd60fe3c052da5f292867e7ba04e705339108daf"
+      sha256 "67f217b58e26e0c47612b386e10d531d4aef679818e31c9125887c615e1c3aa6"
     end
   end
 
