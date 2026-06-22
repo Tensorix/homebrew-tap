@@ -2,11 +2,11 @@ cask "metahub-app" do
   version "0.1.5"
 
   on_arm do
-    sha256 "e4986e60e5b0fedd951317a53d3114a3f51926fa32791db1b7884572b7868b6d"
+    sha256 "504eeb79e36e8cbaa685b154cdbb0536626fbd18e6859085bf5ff878cf5dd191"
     url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.1.5/Metahub-0.1.5-arm64.dmg"
   end
   on_intel do
-    sha256 "e5f3097a83ad153aa0e9a3c36b62bf7600db404469e47dc4ccd956cb71de5e01"
+    sha256 "5f0ecbed733c1c6f4e185fdbe5ee3a00068ee9eda3f8849380847214e5308ce0"
     url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.1.5/Metahub-0.1.5-x64.dmg"
   end
 
@@ -14,7 +14,12 @@ cask "metahub-app" do
   desc "Local-first typed knowledge base with CRDT sync for AI agents (desktop app)"
   homepage "https://github.com/Tensorix/metahub-core"
 
-  app "Metahub.app"
+  # The bundle inside the dmg is "metahub-desktop.app": electron-builder 26 names
+  # the .app after executableName (set in electron-builder.yml to dodge the '@' in
+  # the scoped npm name), not productName. Copy that real name but install it as
+  # "Metahub.app" so the user-facing app — and the postflight/zap paths below —
+  # stay "Metahub.app".
+  app "metahub-desktop.app", target: "Metahub.app"
 
   # Unsigned, by design (open-source — no Apple Developer signing). macOS would
   # otherwise flag the freshly installed .app as "damaged" (the quarantine
