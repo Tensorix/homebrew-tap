@@ -1,27 +1,27 @@
 class MetahubCli < Formula
   desc "Local-first typed knowledge base with CRDT sync for AI agents (CLI)"
   homepage "https://github.com/Tensorix/metahub-core"
-  version "0.3.2"
+  version "0.4.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/Tensorix/metahub-core/releases/download/v0.3.2/metahub-darwin-arm64"
-      sha256 "2b01853c52fc9b006dd21f106c7ecd3883d7a05e7e6ccc0ae9846cfedd1bbd5a"
+      url "https://github.com/Tensorix/metahub-core/releases/download/v0.4.0/metahub-darwin-arm64"
+      sha256 "330189e52409201984e88393c43fde6e749d8d4f9c89f7ec421ad4cae02cd647"
     end
     on_intel do
-      url "https://github.com/Tensorix/metahub-core/releases/download/v0.3.2/metahub-darwin-x64"
-      sha256 "f12bf18ea591e38ecb87d497811e498010847ce3460d6936ffd1a4ed8bc23143"
+      url "https://github.com/Tensorix/metahub-core/releases/download/v0.4.0/metahub-darwin-x64"
+      sha256 "3bb3626ddc11866fc398798671934fd34fa5565b995d923be4546a01fa59339e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/Tensorix/metahub-core/releases/download/v0.3.2/metahub-linux-arm64"
-      sha256 "880fa45fb7f550a5f22e195e1446a38decfab46053a44555b8a7eeede7df4e52"
+      url "https://github.com/Tensorix/metahub-core/releases/download/v0.4.0/metahub-linux-arm64"
+      sha256 "da4775fe3dd956dd9dc5cf162a1579be444b8c6bf650b2dc0644243911052bad"
     end
     on_intel do
-      url "https://github.com/Tensorix/metahub-core/releases/download/v0.3.2/metahub-linux-x64"
-      sha256 "ed42d6609818fdbc30986ef1e9d566c62e6bd618db25576e751c7a5af2c620c7"
+      url "https://github.com/Tensorix/metahub-core/releases/download/v0.4.0/metahub-linux-x64"
+      sha256 "d0bc49d2d4bd533e2391e7d7998902a60557a2e16708eaadcba98e92c76d93e1"
     end
   end
 
