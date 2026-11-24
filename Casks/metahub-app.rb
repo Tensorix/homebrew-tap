@@ -1,13 +1,13 @@
 cask "metahub-app" do
-  version "0.4.1"
+  version "0.4.2"
 
   on_arm do
-    sha256 "795e38e615c8a2913298d2f52c66a60321377a5f2fb29f09d53df049ecdc35a8"
-    url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.4.1/Metahub-0.4.1-arm64.dmg"
+    sha256 "42a0bfb28313d5f3475c8c2723702193c3244b06e28f88a3cd03b1b17a18dfc0"
+    url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.4.2/Metahub-0.4.2-arm64.dmg"
   end
   on_intel do
-    sha256 "f670a316fb6ee9a6422d92bc5b49cd07b9615e6b4839f98f396bb7f4e01f3253"
-    url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.4.1/Metahub-0.4.1-x64.dmg"
+    sha256 "f8aac390ed3bc28f7366e8b521c5458bb7eae2ddc216527c4368d6219f06eb31"
+    url "https://github.com/Tensorix/metahub-core/releases/download/desktop-v0.4.2/Metahub-0.4.2-x64.dmg"
   end
 
   name "Metahub"
